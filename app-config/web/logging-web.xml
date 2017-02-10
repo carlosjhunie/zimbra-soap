@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE group PUBLIC "-//TELUS.com//DTD PropertyNode 1.0//EN" "http://www.telus.com/dtd/PropertyNode.dtd">
+
+<group name="irrelevant">
+    <group name="logging">
+        <prop name="log4j.rootCategory">WARN, CONSOLE</prop>
+        <prop name="log4j.debug">true</prop>
+
+        <prop name="log4j.appender.CONSOLE">org.apache.log4j.ConsoleAppender</prop>
+        <prop name="log4j.appender.CONSOLE.Threshold">TRACE</prop>
+        <prop name="log4j.appender.CONSOLE.layout">org.apache.log4j.PatternLayout</prop>
+        <prop name="log4j.appender.CONSOLE.layout.ConversionPattern">[%d{DATE} %c %t %-5p]- %m%n%n</prop>
+        
+        <prop name="log4j.appender.FILE">org.apache.log4j.RollingFileAppender</prop>
+        <prop name="log4j.appender.FILE.Append">true</prop>
+        <prop name="log4j.appender.FILE.Threshold">TRACE</prop>
+        <prop name="log4j.appender.FILE.MaxFileSize">200MB</prop>
+        <prop name="log4j.appender.FILE.MaxBackupIndex">15</prop>
+        <prop name="log4j.appender.FILE.layout">org.apache.log4j.PatternLayout</prop>
+        <prop name="log4j.appender.FILE.layout.ConversionPattern">[%d{DATE} %c %t %-5p]- %m%n%n</prop>
+        <prop name="log4j.appender.FILE.file">${dirs/log4j/pwmFlushLogDir}/${fw_appId}-web.log</prop>
+
+        <prop name="log4j.logger.com.telus.framework.config.spring.PlaceholderConfigurer">TRACE, FILE</prop>
+        <prop name="log4j.logger.com.telus">${log4j/severity/pwmFlushThreshold}, FILE </prop>
+        <prop name="log4j.logger.java.sql">${log4j/severity/pwmFlushThreshold}, FILE</prop>
+        <prop name="log4j.logger.org.springframework.web.filter">${log4j/severity/pwmFlushThreshold}</prop>
+
+    </group>
+</group>

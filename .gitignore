@@ -1,0 +1,12 @@
+*.class
+*.jar
+*.war
+target/
+generated-sources/
+.settings/
+gensrc/
+.project
+.classpath
+#*.xsd
+#*.wsdl
+*-ws-client/src/

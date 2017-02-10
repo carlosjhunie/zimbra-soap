@@ -1,0 +1,320 @@
+
+dn: cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@
+objectClass: top
+objectClass: telusconfigenvironment
+cn: Statlog4j
+
+
+dn: cn=configFile, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: /WEB-INF/log4j.xml
+javaClassName: java.lang.String
+cn: configFile
+
+
+dn: cn=thresholdLevel, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: ERROR
+javaClassName: java.lang.String
+cn: thresholdLevel
+
+
+dn: cn=useConfigFile, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: false
+javaClassName: java.lang.String
+cn: useConfigFile
+
+
+
+dn: cn=layoutPattern, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: %-25d %-5p [%t] %c - %m%n
+javaClassName: java.lang.String
+cn: layoutPattern
+
+dn: cn=appenderNames, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: ROLLING
+telusconfigstringvalue: LIFECYCLE
+telusconfigstringvalue: DAILYROLLING
+javaClassName: java.lang.String
+cn: appenderNames
+
+dn: cn=appender.ROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@
+description: 
+objectClass: top
+objectClass: telusconfigenvironment
+cn: appender.ROLLING
+
+dn: cn=name, cn=appender.ROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: ROLLING
+javaClassName: java.lang.String
+cn: name
+
+dn: cn=appenderType, cn=appender.ROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: RollingFileAppender
+javaClassName: java.lang.String
+cn: appenderType
+
+dn: cn=file, cn=appender.ROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: /Statlog4jRolling.log
+javaClassName: java.lang.String
+cn: file
+
+dn: cn=appendFlag, cn=appender.ROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: True
+javaClassName: java.lang.String
+cn: appendFlag
+
+dn: cn=bufferedIOFlag, cn=appender.ROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: False
+javaClassName: java.lang.String
+cn: bufferedIOFlag
+
+dn: cn=bufferSize, cn=appender.ROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: 8192
+javaClassName: java.lang.String
+cn: bufferSize
+
+dn: cn=immediateFlushFlag, cn=appender.ROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: True
+javaClassName: java.lang.String
+cn: immediateFlushFlag
+
+dn: cn=maxBackupIndex, cn=appender.ROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: 2
+javaClassName: java.lang.String
+cn: maxBackupIndex
+
+dn: cn=maxFileSize, cn=appender.ROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: 100KB
+javaClassName: java.lang.String
+cn: maxFileSize
+
+dn: cn=threshold, cn=appender.ROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: ERROR
+javaClassName: java.lang.String
+cn: threshold
+
+
+dn: cn=appender.LIFECYCLE, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@
+description: 
+objectClass: top
+objectClass: telusconfigenvironment
+cn: appender.LIFECYCLE
+
+dn: cn=name, cn=appender.LIFECYCLE, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: LIFECYCLE
+javaClassName: java.lang.String
+cn: name
+
+dn: cn=appenderType, cn=appender.LIFECYCLE, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: FileAppender
+javaClassName: java.lang.String
+cn: appenderType
+
+dn: cn=file, cn=appender.LIFECYCLE, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: /Statlog4jLifeCycle.log
+javaClassName: java.lang.String
+cn: file
+
+dn: cn=appendFlag, cn=appender.LIFECYCLE, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: False
+javaClassName: java.lang.String
+cn: appendFlag
+
+dn: cn=bufferedIOFlag, cn=appender.LIFECYCLE, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: False
+javaClassName: java.lang.String
+cn: bufferedIOFlag
+
+dn: cn=bufferSize, cn=appender.LIFECYCLE, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: 8192
+javaClassName: java.lang.String
+cn: bufferSize
+
+dn: cn=immediateFlushFlag, cn=appender.LIFECYCLE, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: True
+javaClassName: java.lang.String
+cn: immediateFlushFlag
+
+dn: cn=threshold, cn=appender.LIFECYCLE, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: DEBUG
+javaClassName: java.lang.String
+cn: threshold
+
+dn: cn=appender.DAILYROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@
+description: 
+objectClass: top
+objectClass: telusconfigenvironment
+cn: appender.DAILYROLLING
+
+dn: cn=name, cn=appender.DAILYROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: DAILYROLLING
+javaClassName: java.lang.String
+cn: name
+
+dn: cn=appenderType, cn=appender.DAILYROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: DailyRollingFileAppender
+javaClassName: java.lang.String
+cn: appenderType
+
+dn: cn=file, cn=appender.DAILYROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: /Statlog4jDailyRolling.log
+javaClassName: java.lang.String
+cn: file
+
+dn: cn=appendFlag, cn=appender.DAILYROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: True
+javaClassName: java.lang.String
+cn: appendFlag
+
+dn: cn=bufferedIOFlag, cn=appender.DAILYROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: False
+javaClassName: java.lang.String
+cn: bufferedIOFlag
+
+dn: cn=bufferSize, cn=appender.DAILYROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: 8192
+javaClassName: java.lang.String
+cn: bufferSize
+
+dn: cn=immediateFlushFlag, cn=appender.DAILYROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: True
+javaClassName: java.lang.String
+cn: immediateFlushFlag
+
+dn: cn=datePattern, cn=appender.DAILYROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: .yyyy-MM-dd-a
+javaClassName: java.lang.String
+cn: datePattern
+
+dn: cn=threshold, cn=appender.DAILYROLLING, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: ERROR
+javaClassName: java.lang.String
+cn: threshold
+
+dn: cn=loggerNames, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: rootLogger
+javaClassName: java.lang.String
+cn: loggerNames
+
+dn: cn=logger.rootLogger, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@
+description: 
+objectClass: top
+objectClass: telusconfigenvironment
+cn: logger.rootLogger
+
+dn: cn=level, cn=logger.rootLogger, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@ 
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: ERROR
+javaClassName: java.lang.String
+cn: level
+
+dn: cn=appenders, cn=logger.rootLogger, cn=Statlog4j, cn=log4jConfig, @ldap.baseDN@
+objectClass: top
+objectClass: javaobject
+objectClass: telusconfigstringvaluedobject
+telusconfigstringvalue: ROLLING
+telusconfigstringvalue: LIFECYCLE
+telusconfigstringvalue: DAILYROLLING
+javaClassName: java.lang.String
+cn: appenders
+

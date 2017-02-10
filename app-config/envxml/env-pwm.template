@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE group PUBLIC "-//TELUS.com//DTD PropertyNode 1.0//EN" "http://www.telus.com/dtd/PropertyNode.dtd">
+
+<group name="irrelevant">
+
+	<group name="dirs">
+		<group name="log4j">
+			<prop name="pwmFlushLogDir">@dirs.log4j.pwmFlush@</prop>
+		</group>
+	</group>
+
+	<group name="log4j">
+		<group name="severity">
+				<prop name="pwmFlushThreshold">@pwmFlush.logLevel@</prop>
+		</group>
+	</group>
+
+	<group name="connections">
+		<group name="SOA">
+			<group name="serviceURLs">
+			</group>
+		</group>
+
+		<!-- the default will be to use the protocol followed by the fully qualified 
+			host name and the port -->
+		<group name="servers">
+			<!-- Error, Performance and Audit frameworks properties -->
+			<prop name="readAuditSvr">@readAuditSvr@</prop>
+			<prop name="performanceAuditSvr">@performanceAuditSvr@</prop>
+			<prop name="customerMgtSvr">@customerMgtSvr@</prop>
+			
+		</group>
+		
+		<group name="webServices">
+			<group name="refpds">
+				<prop name="endpointAddress">@refpds.webService@</prop>
+			</group>
+			<group name="zimbra">
+				<prop name="endpointUrl">@webService.zimbra.endpoint.url@</prop>
+				<prop name="username">@webService.zimbra.admin.username@</prop>
+				<prop name="password">@webService.zimbra.admin.password@</prop>
+			</group>
+		</group>
+
+		<group name="security">
+			<group name="jndiLookup">
+				<!-- This is used by fw-refresh-spring.xml of TELUS Error frameworks -->
+				<group name="telus">
+					<prop name="principal">verification</prop>
+					<prop name="credentials">verification</prop>
+				</group>
+			</group>
+		</group>
+	</group>
+
+	<!-- frameworks properties -->
+	<group name="fw_props">
+		<group name="audit">
+			<prop name="maxQueueDepth">5000</prop>
+		</group>
+		<group name="performance">
+			<prop name="maxQueueDepth">5000</prop>
+		</group>
+		<group name="error">
+			<prop name="maxQueueDepth">5000</prop>
+			<prop name="errorWorkerCount">5</prop>
+			<!-- errorWorkerPeriod in milliseconds -->
+			<prop name="errorWorkerPeriod">5000</prop>
+		</group>
+	</group>
+	
+	<group name="security">
+	</group>
+
+	<!-- jax-ws timeout settings -->
+	<group name="timeout">
+		<prop name="requestTimeout">120000</prop>
+		<prop name="connectTimeout">30000</prop>
+	</group>
+
+</group>
+
+
+

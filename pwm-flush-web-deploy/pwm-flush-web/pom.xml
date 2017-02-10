@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<!-- telus.archetype.version:20150306.Application.Complete -->
+
+	<parent>
+		<groupId>net.telus.webmail.pwm-flush-web-deploy</groupId>
+		<artifactId>pom-pwm-flush-web-deploy</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>pwm-flush-web</artifactId>
+	<packaging>war</packaging>
+	<name>pwm-flush-web</name>
+
+	<build>
+		<!-- DO NOT USE "." on the version number as Configuration Framework and 
+			the JMX console will not work -->
+		<finalName>pwm-flush-web-1_0</finalName>
+	</build>
+
+	<properties>
+		<!-- This value will be used to update the context-root of the weblogic.xml -->
+		<m2eclipse.wtp.contextRoot>pwm-flush-web</m2eclipse.wtp.contextRoot>
+		<org.json.version>20140107</org.json.version>
+	</properties>
+
+	<dependencies>
+		<!-- internal project dependencies -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>${org.json.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>telus.frameworks.enterprise.frameworks-share</groupId>
+			<artifactId>frameworks-webservices</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>telus.frameworks.enterprise.frameworks-share</groupId>
+			<artifactId>frameworks-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+		<!-- <dependency>
+			<groupId>telus.TELUS_Reference_PDS</groupId>
+			<artifactId>telus-ref-rpds-access-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>telus.TELUS_Reference_PDS</groupId>
+			<artifactId>telus-ref-rpds-ws-client</artifactId>
+		</dependency> -->
+		<dependency>
+			<groupId>net.telus.webmail.pwm-flush-common</groupId>
+			<artifactId>pwm-flush-zimbra-ws-client</artifactId>
+			<version>${application.common.version}</version>
+		</dependency>
+		<!-- below dependencies will not be included in the war file -->
+		<dependency>
+			<groupId>batik</groupId>
+			<artifactId>batik-all</artifactId>
+			<version>1.7</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+		<!-- 
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+        -->
+
+	</dependencies>
+	<!-- Use Eclipse profile to add Configuration Frameworks files to the classpath 
+		when installing within the Eclipse IDE environment. -->
+	<profiles>
+		<profile>
+			<id>Eclipse</id>
+			<dependencies>
+				<dependency>
+					<groupId>net.telus.webmail</groupId>
+					<artifactId>pwm-flush-app-config</artifactId>
+					<version>${application.app-config.version}</version>
+				</dependency>
+				<dependency>
+					<groupId>telus-maven.plugins-support</groupId>
+					<artifactId>telus-sso-agent-stub</artifactId>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
+
+</project>
